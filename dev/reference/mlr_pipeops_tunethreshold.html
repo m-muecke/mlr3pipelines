@@ -143,7 +143,7 @@ Will be converted to a <code><a href="https://mlr3.mlr-org.com/reference/Measure
 Initialized to <code>"classif.ce"</code>, i.e. misclassification error.</p></li>
 <li><p><code>optimizer</code> :: <code><a href="https://bbotk.mlr-org.com/reference/Optimizer.html" class="external-link">Optimizer</a></code>|<code>character(1)</code><br><code><a href="https://bbotk.mlr-org.com/reference/Optimizer.html" class="external-link">Optimizer</a></code> used to find optimal thresholds.
 If <code>character</code>, converts to <code><a href="https://bbotk.mlr-org.com/reference/Optimizer.html" class="external-link">Optimizer</a></code>
-via <code><a href="https://bbotk.mlr-org.com/reference/opt.html" class="external-link">opt</a></code>. Initialized to <code><a href="https://bbotk.mlr-org.com/reference/mlr_optimizers_gensa.html" class="external-link">OptimizerGenSA</a></code>.</p></li>
+via <code><a href="https://bbotk.mlr-org.com/reference/opt.html" class="external-link">opt</a></code>. Initialized to <code>OptimizerGenSA</code>.</p></li>
 <li><p><code>log_level</code> :: <code>character(1)</code> | <code>integer(1)</code><br>
 Set a temporary log-level for <code>lgr::get_logger("bbotk")</code>. Initialized to: "warn".</p></li>
 </ul></div>
@@ -254,6 +254,7 @@ See the <code>optimizer</code> parameter for more info.</p>
 <span class="r-in"><span> <span class="op">}</span> </span></span>
 <span class="r-in"><span> <span class="op">}</span> </span></span>
 <span class="r-in"><span> <span class="op">}</span> </span></span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> OptimInstanceSingleCrit is deprecated. Use OptimInstanceBatchSingleCrit instead.</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $classif.rpart</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $model</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> n= 150 </span>
@@ -279,13 +280,16 @@ See the <code>optimizer</code> parameter for more info.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $task_hash</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "b39ef23a66b1f1ee"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "34a6beb27c3181c3"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $feature_names</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Petal.Length" "Petal.Width"  "Sepal.Length" "Sepal.Width" </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $validate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $mlr3_version</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] ‘0.19.0’</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] ‘0.20.0’</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $data_prototype</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Empty data.table (0 rows and 5 cols): Species,Petal.Length,Petal.Width,Sepal.Length,Sepal.Width</span>
@@ -324,7 +328,8 @@ See the <code>optimizer</code> parameter for more info.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Empty data.table (0 rows and 4 cols): Species,classif.rpart.prob.setosa,classif.rpart.prob.versicolor,classif.rpart.prob.virginica</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> attr(,"class")</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "learner_state" "list"         </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "pipeop_learner_cv_state" "learner_state"          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3] "list"                   </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $tunethreshold</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $tunethreshold$threshold</span>
@@ -339,7 +344,7 @@ See the <code>optimizer</code> parameter for more info.</p>
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by Martin Binder, Florian Pfisterer, Lennart Schneider, Bernd Bischl, Michel Lang, Susanne Dandl.</p>
+  <p>Developed by Martin Binder, Florian Pfisterer, Lennart Schneider, Bernd Bischl, Michel Lang, Sebastian Fischer, Susanne Dandl.</p>
 </div>
 
 <div class="pkgdown-footer-right">
